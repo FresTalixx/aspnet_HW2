@@ -1,0 +1,28 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+@server = localhost:5000
+@port = 7092
+
+### Get all messages
+GET http://{{server}}:{{port}}/messages
+Accept: application/json
+
+###
+
+### Get a message by ID
+GET http://{{server}}:{{port}}/messages/1
+Accept: application/json
+
+###
+
+### Get messages by sender address
+GET http://{{server}}:{{port}}/messages/address/example@email.com
+Accept: application/json
+
+###
+
+### Delete a message by ID
+DELETE http://{{server}}:{{port}}/messages/1
+
+###
+
